@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P-Ticket</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="max-w-7xl border m-auto justify-center">
+    <header class="sm:container sm: mx-auto lg:max-w-7xl">
+      <div class="navbar bg-base-100 justify-items-center">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <p class="btn btn-ghost text-4xl">P-Ticket</p>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <img
+            class="hidden lg:inline pr-4"
+            src="Images/Frame (6).png"
+            alt=""
+          />
+          <div>
+            <button
+              class="flex items-center bg-green-200 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-green-400 rounded-lg"
+            >
+              <span class="text-green-600">Bus</span>
+              <img src="/images/bus-icon.png" alt="" class="ml-2" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full pb-2 relative">
+        <img src="/images/banner.png" class="w-full" alt="Banner Image" />
+        <div class="absolute inset-0 flex flex-col justify-center items-center">
+          <h2 class="text-white text-3xl font-bold mb-4">
+            <p class="text-5xl pb-4">End-to-End Travel with</p>
+            <p class="text-green-500 text-center font-bold text-5xl">
+              P-Paribahan
+            </p>
+          </h2>
+          <p class="text-white text-lg mb-8">
+            To feel the thrill just don't wait. Ride with Us.
+          </p>
+          <button
+            class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Buy Tickets
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- offer section -->
+      <section>
+        <div>
+          <p class="text-4xl text-center pt-10 font-bold">
+            Best offers for You
+          </p>
+        </div>
+        <div class="flex justify-between pt-10">
+          <img src="/images/Group 113.png" alt="" />
+          <img src="/images/Group 113.png" alt="" />
+        </div>
+        <div class="text-center pt-10">
+          <button
+            class="bg-green-200 hover:bg-green-700 text-green-400 font-bold py-2 px-4 rounded-xl"
+          >
+            See All Offers
+          </button>
+        </div>
+      </section>
+      <!--Ticket section-->
+      <section></section>
+      <div class="bg-slate-300">
+        <div class="text-center pt-14">
+          <p class="text-5xl font-bold pb-4">P.H Paribahan</p>
+          <p>
+            If you are looking for comfort and luxury in travel you are just one
+            click away
+          </p>
+        </div>
+      </div>
+      <!--1st column-->
+      <div class="flex justify-between pt-10 max-w-4xl">
+        <div class="flex">
+          <img src="/images/bus-logo.png" alt="" />
+          <p class="pl-4">
+            Greenline Paribahan <br />
+            Coach-009-WEB ! AC_Business
+          </p>
+        </div>
+
+        <div class="">
+          <button
+            class="flex items-center bg-green-200 hover:bg-green-700 text-green-700 font-bold py-2 px-4 border border-green-400 rounded-lg"
+          >
+            <img src="/images/seat-green.png" alt="" class="ml-2" />
+            <p class="text-green-600"><span>40</span>Seats Left</p>
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="bus.js"></script>
+  </body>
+</html>
