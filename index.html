@@ -11,7 +11,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="max-w-7xl border m-auto justify-center">
+  <body class="max-w-7xl m-auto justify-center">
     <header class="sm:container sm: mx-auto lg:max-w-7xl">
       <div class="navbar bg-base-100 justify-items-center">
         <div class="navbar-start">
@@ -81,11 +81,11 @@
           <p class="text-white text-lg mb-8">
             To feel the thrill just don't wait. Ride with Us.
           </p>
-          <button
-            class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          <a
+            href="#ticket"
+            class="bg-[#1DD100] p-2 rounded-lg text-white font-semibold"
+            >Buy Tickets</a
           >
-            Buy Tickets
-          </button>
         </div>
       </div>
     </header>
@@ -121,7 +121,7 @@
         </div>
       </div>
       <!--1st column-->
-      <div class="flex flex-1">
+      <div class="flex flex-1" id="ticket">
         <div class="pl-4">
           <div class="flex flex-1 justify-between pt-10 max-w-4xl pb-4">
             <div class="flex">
@@ -138,7 +138,7 @@
               >
                 <img src="/images/seat-green.png" alt="" class="ml-2" />
                 <p class="text-green-600">
-                  <span id="current-seat">40</span>Seats Left
+                  <span id="current-seat">16</span>Seats Left
                 </p>
               </button>
             </div>
@@ -179,7 +179,7 @@
       <section>
         <!--for whole section-->
         <div class="grid grid-cols-2 gap-14">
-          <div class="">
+          <div class="ww">
             <p class="text-3xl font-semibold pb-4">Select Your Seat</p>
             <hr />
             <div class="flex justify-between py-3">
@@ -192,7 +192,7 @@
             </div>
             <hr />
             <!--Seat Start-->
-            <div>
+            <div id="">
               <div class="flex items-center justify-center pt-6">
                 <div class="text-4xl mr-6">A</div>
                 <div class="grid grid-cols-4 gap-24">
@@ -317,84 +317,54 @@
             <hr />
             <div class="overflow-x-auto pb-4">
               <table class="table">
-                <!-- head -->
                 <thead>
                   <tr>
-                    <th>Seat<sup id="added-seat">0</sup></th>
+                    <th>
+                      Seat
+                      <span id="added-seat" class="text-2xl text-green-500"
+                        >0</span
+                      >
+                    </th>
                     <th>Class</th>
                     <th>Price</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <!-- row 1 -->
-                  <tr>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                  </tr>
-                  <!-- row 2 -->
-                  <tr>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                  </tr>
-                  <!-- row 3 -->
-                  <tr>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                  </tr>
+                <tbody id="seatList">
+                  <!-- Rows will be dynamically added here -->
                 </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td id="totalPrice" class="text-xl pt-12">
+                      Total Price: 0
+                    </td>
+                  </tr>
+                </tfoot>
               </table>
             </div>
-            <hr />
-            <p>Total Price</p>
+
             <hr class="pb-4" />
-            <div class="flex-1">
+
+            <div class="flex-1" id="coupon-section">
               <input
+                id="input-field-coupon"
                 type="text"
                 placeholder="Have any Coupons!"
                 class="input input-bordered max-w-xs"
               />
               <button
-                class="bg-green-300 hover:bg-green-700 text-green-600 font-bold py-2 px-4 rounded-xl"
+                id="apply-btn"
+                class="bg-[#1DD100] hover:bg-green-400 text-white font-bold py-2 px-4 rounded-xl"
               >
                 Apply
               </button>
             </div>
-            <p class="pt-4">Grand Total</p>
-            <label class="form-control max-w-xs">
-              <div class="label">
-                <span class="label-text-alt">Passenger Name*</span>
-              </div>
-              <input
-                type="text"
-                placeholder="Enter Your Name"
-                class="input input-bordered w-full max-w-xs"
-              />
-            </label>
-            <label class="form-control max-w-xs">
-              <div class="label">
-                <span class="label-text-alt">Phone Number*</span>
-              </div>
-              <input
-                type="text"
-                placeholder="Enter Your Phone Number"
-                class="input input-bordered w-full max-w-xs"
-              />
-            </label>
-            <label class="form-control max-w-xs pb-6">
-              <div class="label">
-                <span class="label-text-alt">Email ID*</span>
-              </div>
-              <input
-                type="text"
-                placeholder="Enter Your Email"
-                class="input input-bordered w-full max-w-xs"
-              />
-            </label>
+            <p id="total" class="pt-4 pl-64 font-bold text-xl pb-10">
+              Grand Total: 0
+            </p>
+
             <button
-              class="bg-green-300 hover:bg-green-700 text-green-600 font-bold pt-2 px-44 rounded-xl"
+              class="bg-[#1DD100] hover:bg-green-700 text-white font-bold mb-10 pt-2 px-44 rounded-xl"
             >
               Next
             </button>
