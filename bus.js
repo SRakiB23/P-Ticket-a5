@@ -111,6 +111,9 @@ function handleSeatClick(seat) {
 
 // Function to update seat count
 function updateSeatCount() {
+  const currentSeat = getTextElementValueById("current-seat");
+  const updatedSeat = currentSeat - 1;
+  setTextElementValueById("current-seat", updatedSeat);
   const totalSeat = getTextElementValueById("added-seat");
   const updatedSeatCount = totalSeat + 1;
   setTextElementValueById("added-seat", updatedSeatCount);
