@@ -1,36 +1,3 @@
-// // Get all seat elements
-// const seats = document.querySelectorAll(".grid-cols-4 > div");
-
-// // Add click event listener to each seat
-// seats.forEach((seat) => {
-//   seat.addEventListener("click", () => {
-//     // Toggle background color
-//     seat.classList.toggle("bg-green-400");
-
-//     mouseClick();
-//   });
-// });
-
-// function mouseClick() {
-//   const currentSeat = getTextElementValueById("current-seat");
-//   const updatedSeat = currentSeat - 1;
-//   setTextElementValueById("current-seat", updatedSeat);
-
-//   const totalSeat = getTextElementValueById("added-seat");
-//   const updatedSeatCount = totalSeat + 1;
-//   setTextElementValueById("added-seat", updatedSeatCount);
-// }
-
-// function handleSeatSelection(seatId) {
-//   const seatNumber = seatId.toUpperCase();
-//   const classType = "Economy";
-//   const price = "550";
-
-//   document.getElementById("seat").textContent = seatNumber;
-//   document.getElementById("class").textContent = classType;
-//   document.getElementById("price").textContent = price;
-// }
-
 let totalPrice = 0;
 
 function handleSeatSelection(seatId) {
@@ -38,10 +5,8 @@ function handleSeatSelection(seatId) {
   const classType = "Economy";
   const price = 550; // Store price as a number for calculation
 
-  // Create a new row
   const newRow = document.createElement("tr");
 
-  // Create three cells for seat, class, and price
   const seatCell = document.createElement("td");
   seatCell.textContent = seatNumber;
 
@@ -51,7 +16,6 @@ function handleSeatSelection(seatId) {
   const priceCell = document.createElement("td");
   priceCell.textContent = price;
 
-  // Append cells to the new row
   newRow.appendChild(seatCell);
   newRow.appendChild(classCell);
   newRow.appendChild(priceCell);
@@ -93,18 +57,14 @@ function hideCouponSection() {
   couponSection.style.display = "none";
 }
 
-let maxSeatsReached = false; // Flag to track maximum seats reached
+let maxSeatsReached = false;
 
 // Function to handle seat click event
 function handleSeatClick(seat) {
   if (!maxSeatsReached) {
     // Toggle background color
     seat.classList.toggle("bg-green-400");
-
-    // Call function to update seat information in the table
     handleSeatSelection(seat.id);
-
-    // Call function to update seat count
     updateSeatCount();
   }
 }
@@ -119,8 +79,8 @@ function updateSeatCount() {
   setTextElementValueById("added-seat", updatedSeatCount);
 
   if (updatedSeatCount === 4) {
-    alert("You Have Reached Maximum Number of Tickets");
-    maxSeatsReached = true; // Update flag
+    alert("You Have Reached Maximum Number (4) of Tickets");
+    maxSeatsReached = true;
   }
 }
 
